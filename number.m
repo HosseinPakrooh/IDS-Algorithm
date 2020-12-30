@@ -1,0 +1,147 @@
+function [numberout1,numberout2,numberout3,numberout4]=number(a)
+b=a;
+if(b(1,1)==0)
+    t=b(1,2);
+    b(1,2)=b(1,1);
+    b(1,1)=t;
+  numberout1=b;
+    b=a;
+     t=b(2,1);
+    b(2,1)=b(1,1);
+    b(1,1)=t;
+    numberout3=b;
+    b=a;
+    numberout2=0;
+    numberout4=0;
+elseif(b(1,2)==0)
+    t=b(1,1);
+    b(1,1)=b(1,2);
+    b(1,2)=t;
+    numberout2=b;
+    b=a;
+     t=b(1,3);
+    b(1,3)=b(1,2);
+    b(1,2)=t;
+    numberout1=b;
+    b=a;
+     t=b(2,2);
+    b(2,2)=b(1,2);
+    b(1,2)=t;
+    numberout3=b;
+    b=a;
+    numberout4=0;
+elseif(b(1,3)==0)
+     t=b(1,2);
+    b(1,2)=b(1,3);
+    b(1,3)=t;
+    numberout2=b;
+    b=a;
+    t=b(2,3);
+    b(2,3)=b(1,3);
+    b(1,3)=t;
+    numberout3=b;
+    b=a;
+    numberout1=0;
+    numberout4=0;
+elseif(b(2,1)==0)
+     t=b(1,1);
+    b(1,1)=b(2,1);
+    b(2,1)=t;
+    numberout4=b;
+    b=a;
+    t=b(2,2);
+    b(2,2)=b(2,1);
+    b(2,1)=t;
+    numberout1=b;
+    b=a;
+    t=b(3,1);
+    b(3,1)=b(2,1);
+    b(2,1)=t;
+    numberout3=b;
+    b=a;
+    numberout2=0;
+elseif(b(2,2)==0)
+    t=b(2,1);
+    b(2,1)=b(2,2);
+    b(2,2)=t;
+    numberout2=b;
+    b=a;
+     t=b(2,3);
+    b(2,3)=b(2,2);
+    b(2,2)=t;
+    numberout1=b;
+     b=a;
+     t=b(1,2);
+    b(1,2)=b(2,2);
+    b(2,2)=t;
+    numberout4=b;
+     b=a;
+     t=b(3,2);
+    b(3,2)=b(2,2);
+    b(2,2)=t;
+   numberout3=b;
+     b=a;
+elseif(b(2,3)==0)
+     t=b(1,3);
+    b(1,3)=b(2,3);
+    b(2,3)=t;
+    numberout4=b;
+    b=a;
+    t=b(2,2);
+    b(2,2)=b(2,3);
+    b(2,3)=t;
+    numberout2=b;
+    b=a;
+    t=b(3,3);
+    b(3,3)=b(2,3);
+    b(2,3)=t;
+    numberout3=b;
+    b=a;
+    numberout1=0;
+elseif(b(3,1)==0)
+      t=b(2,1);
+    b(2,1)=b(3,1);
+    b(3,1)=t;
+    numberout4=b;
+    b=a;
+     t=b(3,2);
+    b(3,2)=b(3,1);
+    b(3,1)=t;
+    numberout1=b;
+    b=a;
+    numberout2=0;
+    numberout3=0;
+elseif(b(3,2)==0)
+     t=b(3,1);
+    b(3,1)=b(3,2);
+    b(3,2)=t;
+    numberout2=b;
+    b=a;
+    t=b(3,3);
+    b(3,3)=b(3,2);
+    b(3,2)=t;
+    numberout1=b;
+    b=a;
+    t=b(2,2);
+    b(2,2)=b(3,2);
+    b(3,2)=t;
+    numberout4=b;
+    b=a;
+    numberout3=0;
+elseif(b(3,3)==0)
+    t=b(3,2);
+    b(3,2)=b(3,3);
+    b(3,3)=t;
+    numberout2=b;
+    b=a;
+    t=b(2,3);
+    b(2,3)=b(3,3);
+    b(3,3)=t;
+    numberout4=b;
+    b=a;
+    numberout1=0;
+    numberout3=0;
+end
+    
+
+end
